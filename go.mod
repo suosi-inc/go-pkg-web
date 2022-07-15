@@ -10,7 +10,6 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gorilla/context v1.1.1
 	github.com/gorilla/sessions v1.2.1
-	github.com/suosi-inc/go-webpkg v0.24.0
 	go.uber.org/zap v1.21.0
 )
 

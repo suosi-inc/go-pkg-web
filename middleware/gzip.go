@@ -4,7 +4,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/suosi-inc/go-webpkg/middleware/gzips"
+	"github.com/suosi-inc/go-pkg-web/middleware/gzips"
 )
 
 func Gzip(level int, options ...gzips.Option) gin.HandlerFunc {

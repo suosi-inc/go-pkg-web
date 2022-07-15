@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/suosi-inc/go-webpkg/rest"
+	"github.com/suosi-inc/go-pkg-web/rest"
 )
 
 // HeaderAuth is a middleware function that validates the request header.

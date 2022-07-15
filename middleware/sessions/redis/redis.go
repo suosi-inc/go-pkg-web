@@ -5,7 +5,7 @@ import (
 
 	"github.com/boj/redistore"
 	"github.com/gomodule/redigo/redis"
-	"github.com/suosi-inc/go-webpkg/middleware/sessions"
+	"github.com/suosi-inc/go-pkg-web/middleware/sessions"
 )
 
 type Store interface {

@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/suosi-inc/go-webpkg/middleware/jwts"
-	"github.com/suosi-inc/go-webpkg/rest"
+	"github.com/suosi-inc/go-pkg-web/middleware/jwts"
+	"github.com/suosi-inc/go-pkg-web/rest"
 )
 
 // JwtAuth jwt 中间件

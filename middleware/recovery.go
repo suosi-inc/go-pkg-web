@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/suosi-inc/go-webpkg/rest"
+	"github.com/suosi-inc/go-pkg-web/rest"
 )
 
 // RestRecovery For gin.CustomRecovery
