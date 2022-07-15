@@ -1,2 +1,2 @@
-# go-pkg-web
-go-pkg-web
+# go-webpkg
+go-webpkg
