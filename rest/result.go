@@ -2,11 +2,11 @@ package rest
 
 // Result is a generic json result type
 type Result struct {
-	Code    int    `json:"code"`
-	State   bool   `json:"state"`
-	Message string `json:"message"`
-	Error   string `json:"error"`
-	Data    any    `json:"data"`
+	Code    int     `json:"code"`
+	State   bool    `json:"state"`
+	Message *string `json:"message,omitempty"`
+	Error   *string `json:"error,omitempty"`
+	Data    any     `json:"data,omitempty"`
 }
 
 // Success return success result
@@ -14,8 +14,8 @@ func Success() *Result {
 	return &Result{
 		Code:    0,
 		State:   true,
-		Message: "",
-		Error:   "",
+		Message: nil,
+		Error:   nil,
 		Data:    nil,
 	}
 }
@@ -25,8 +25,8 @@ func SuccessMessage(message string) *Result {
 	return &Result{
 		Code:    0,
 		State:   true,
-		Message: message,
-		Error:   "",
+		Message: &message,
+		Error:   nil,
 		Data:    nil,
 	}
 }
@@ -36,8 +36,8 @@ func Error(code int) *Result {
 	return &Result{
 		Code:    code,
 		State:   false,
-		Message: "",
-		Error:   "",
+		Message: nil,
+		Error:   nil,
 		Data:    nil,
 	}
 }
@@ -47,8 +47,8 @@ func ErrorMessage(code int, error string) *Result {
 	return &Result{
 		Code:    code,
 		State:   false,
-		Message: "",
-		Error:   error,
+		Message: nil,
+		Error:   &error,
 		Data:    nil,
 	}
 }
@@ -58,8 +58,8 @@ func Fail() *Result {
 	return &Result{
 		Code:    0,
 		State:   false,
-		Message: "",
-		Error:   "",
+		Message: nil,
+		Error:   nil,
 		Data:    nil,
 	}
 }
@@ -69,8 +69,8 @@ func FailMessage(error string) *Result {
 	return &Result{
 		Code:    0,
 		State:   false,
-		Message: "",
-		Error:   error,
+		Message: nil,
+		Error:   &error,
 		Data:    nil,
 	}
 }
@@ -80,8 +80,19 @@ func Data(data any) *Result {
 	return &Result{
 		Code:    0,
 		State:   true,
-		Message: "",
-		Error:   "",
+		Message: nil,
+		Error:   nil,
+		Data:    data,
+	}
+}
+
+// DataMessage return success result with data result and message
+func DataMessage(data any, message string) *Result {
+	return &Result{
+		Code:    0,
+		State:   true,
+		Message: &message,
+		Error:   nil,
 		Data:    data,
 	}
 }

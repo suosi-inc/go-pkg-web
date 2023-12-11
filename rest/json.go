@@ -41,6 +41,11 @@ func JsonData(ctx *gin.Context, data any) {
 	ctx.JSON(http.StatusOK, Data(data))
 }
 
+// JsonDataMessage return json data with message
+func JsonDataMessage(ctx *gin.Context, data any, message string) {
+	ctx.JSON(http.StatusOK, DataMessage(data, message))
+}
+
 // JsonUnauthorized return json unauthorized
 func JsonUnauthorized(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, Error(http.StatusUnauthorized))
