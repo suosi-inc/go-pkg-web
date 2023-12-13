@@ -1,7 +1,6 @@
 # go-pkg-web
 
-
-Release v0.7.0
+Release v0.18.x For Golang 1.18
 
 ```
 require (
