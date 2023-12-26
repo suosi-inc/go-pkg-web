@@ -11,7 +11,7 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gorilla/context v1.1.2
 	github.com/gorilla/sessions v1.2.2
-	go.uber.org/zap v1.26.0
+	go.uber.org/zap v1.24.0
 )
 ```
 
