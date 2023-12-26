@@ -1,6 +1,6 @@
 module github.com/suosi-inc/go-pkg-web
 
-go 1.18
+go 1.20
 
 require (
 	github.com/boj/redistore v0.0.0-20180917114910-cd5dcc76aeff
@@ -10,7 +10,7 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gorilla/context v1.1.2
 	github.com/gorilla/sessions v1.2.2
-	go.uber.org/zap v1.24.0
+	go.uber.org/zap v1.26.0
 )
 
 require (
@@ -31,7 +31,6 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
-	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.9.0 // indirect
