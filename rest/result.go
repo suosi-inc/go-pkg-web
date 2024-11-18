@@ -2,7 +2,7 @@ package rest
 
 // Result is a generic json result type
 type Result struct {
-	Code    int     `json:"code"`
+	Code    int64   `json:"code"`
 	State   bool    `json:"state"`
 	Message *string `json:"message,omitempty"`
 	Error   *string `json:"error,omitempty"`
@@ -32,7 +32,7 @@ func SuccessMessage(message string) *Result {
 }
 
 // Error return error result
-func Error(code int) *Result {
+func Error(code int64) *Result {
 	return &Result{
 		Code:    code,
 		State:   false,
@@ -43,7 +43,7 @@ func Error(code int) *Result {
 }
 
 // ErrorMessage return error result with error message
-func ErrorMessage(code int, error string) *Result {
+func ErrorMessage(code int64, error string) *Result {
 	return &Result{
 		Code:    code,
 		State:   false,

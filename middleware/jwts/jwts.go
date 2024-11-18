@@ -69,7 +69,8 @@ func ParseToken(tokenStr string, secret string) (*jwt.RegisteredClaims, error) {
 	})
 
 	if err != nil {
-		if e, ok := err.(*jwt.ValidationError); ok {
+		var e *jwt.ValidationError
+		if errors.As(err, &e) {
 			if e.Errors&jwt.ValidationErrorExpired != 0 {
 				return nil, errors.New("token expired")
 			} else if e.Errors&jwt.ValidationErrorSignatureInvalid != 0 {

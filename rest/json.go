@@ -17,12 +17,12 @@ func JsonSuccessMessage(ctx *gin.Context, message string) {
 }
 
 // JsonError return json error
-func JsonError(ctx *gin.Context, code int) {
+func JsonError(ctx *gin.Context, code int64) {
 	ctx.JSON(http.StatusOK, Error(code))
 }
 
 // JsonErrorMessage return json error with message
-func JsonErrorMessage(ctx *gin.Context, code int, error string) {
+func JsonErrorMessage(ctx *gin.Context, code int64, error string) {
 	ctx.JSON(http.StatusOK, ErrorMessage(code, error))
 }
 
