@@ -6,9 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ClientIp(ctx *gin.Context) string {
-	// Nginx 反向代理
-	realIp := strings.TrimSpace(ctx.GetHeader("X-Real-IP"))
+func ClientIpByHeader(ctx *gin.Context, header string) string {
+	realIp := strings.TrimSpace(ctx.GetHeader(header))
 	if realIp == "" {
 		if ctx.ClientIP() == "::1" {
 			return "127.0.0.1"
@@ -18,6 +17,10 @@ func ClientIp(ctx *gin.Context) string {
 	}
 
 	return realIp
+}
+
+func ClientIp(ctx *gin.Context) string {
+	return ClientIpByHeader(ctx, "X-Real-IP")
 }
 
 func ClientUserAgent(ctx *gin.Context) string {
