@@ -1,6 +1,6 @@
 # go-pkg-web
 
-## Main Branch and Release > v0.20 + For Golang 1.20
+## Main Branch and Release > v0.20+ For Golang 1.20
 
 ```
 go 1.20
